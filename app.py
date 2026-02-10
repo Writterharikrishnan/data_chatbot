@@ -268,4 +268,5 @@ if st.session_state.active_mode == "Predict" and st.session_state.show_inference
                 if "target_encoder" in st.session_state and st.session_state.target_encoder is not None:
                     final_pred = st.session_state.target_encoder.inverse_transform([int(raw_pred)])[0]
                 else: final_pred = raw_pred
+
                 st.metric("Prediction Result", final_pred)
